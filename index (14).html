@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family Pizza — Atlantic City, NJ | We Deliver</title>
+<meta name="description" content="Family Pizza, 2416 Atlantic Ave, Atlantic City NJ. Pizza, Italian entrees, Latino kitchen, subs, wings, breakfast & more. Open 11am–3am every day. We deliver.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Pacifico&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #f7f0dc;
+    --cream-card: #fffbf0;
+    --red: #b5262b;
+    --red-dark: #8f1d21;
+    --green: #1e5631;
+    --green-dark: #143d22;
+    --gold: #d9a404;
+    --ink: #2b2420;
+    --ink-soft: #5a4f42;
+    --line: rgba(43,36,32,0.12);
+    --shadow: 0 10px 30px rgba(43,36,32,0.12);
+    --radius: 18px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Nunito Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    margin:0;
+  }
+  .script{
+    font-family:'Pacifico', cursive;
+    font-weight:400;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .container{max-width:1120px; margin:0 auto; padding:0 24px;}
+
+  .patterned{
+    background-color:var(--cream);
+    background-image:
+      radial-gradient(circle at 10px 10px, rgba(30,86,49,0.08) 2px, transparent 2px),
+      radial-gradient(circle at 30px 30px, rgba(181,38,43,0.06) 2px, transparent 2px);
+    background-size: 40px 40px;
+  }
+
+  .topbar{
+    background:var(--red);
+    color:#fff;
+    position:sticky;
+    top:0;
+    z-index:50;
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+  }
+  .topbar-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 24px;
+    max-width:1120px;
+    margin:0 auto;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .topbar .deliver-label{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:800;
+    letter-spacing:0.06em;
+    font-size:0.95rem;
+    text-transform:uppercase;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .topbar .right-cluster{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .topbar .calls{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    font-weight:700;
+    font-size:0.95rem;
+  }
+  .topbar .calls a{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:rgba(255,255,255,0.14);
+    padding:6px 12px;
+    border-radius:999px;
+    transition:background .2s;
+  }
+  .topbar .calls a:hover{background:rgba(255,255,255,0.26);}
+
+  .lang-switch{
+    display:flex;
+    align-items:center;
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.35);
+    border-radius:999px;
+    padding:3px;
+    gap:2px;
+  }
+  .lang-switch .globe-ic{
+    color:#fff;
+    opacity:0.85;
+    display:flex;
+    align-items:center;
+    padding:0 6px 0 10px;
+    flex-shrink:0;
+  }
+  .lang-btn{
+    font-family:'Nunito Sans', sans-serif;
+    font-weight:700;
+    font-size:0.82rem;
+    letter-spacing:0.01em;
+    border:none;
+    background:transparent;
+    color:#fff;
+    opacity:0.8;
+    padding:7px 14px;
+    border-radius:999px;
+    cursor:pointer;
+    transition:all .18s ease;
+    white-space:nowrap;
+  }
+  .lang-btn.active{
+    background:#fff;
+    color:var(--red);
+    opacity:1;
+    box-shadow:0 2px 6px rgba(0,0,0,0.15);
+  }
+  .lang-btn:hover:not(.active){
+    opacity:1;
+    background:rgba(255,255,255,0.12);
+  }
+  .lang-btn:focus-visible{
+    outline:2px solid #fff;
+    outline-offset:2px;
+  }
+  @media (max-width:480px){
+    .lang-switch .globe-ic{display:none;}
+    .lang-btn{padding:7px 10px; font-size:0.78rem;}
+  }
+
+  .hero{
+    padding:64px 24px 56px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .crown-wrap{
+    width:86px;
+    margin:0 auto 6px;
+    color:var(--red);
+  }
+  .hero .brand-name{
+    font-size:clamp(3rem, 9vw, 5.2rem);
+    color:var(--green);
+    line-height:0.95;
+    text-shadow: 2px 2px 0 rgba(217,164,4,0.35);
+  }
+  .hero .brand-sub{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:600;
+    color:var(--red);
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-size:0.95rem;
+    margin-top:6px;
+  }
+  .wave-divider{
+    width:220px;
+    margin:18px auto;
+    color:var(--green);
+  }
+  .hero p.tagline{
+    max-width:520px;
+    margin:0 auto 28px;
+    color:var(--ink-soft);
+    font-size:1.08rem;
+    font-style:italic;
+  }
+  .hero-ctas{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    padding:14px 26px;
+    border-radius:999px;
+    border:2px solid transparent;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{
+    background:var(--red);
+    color:#fff;
+    box-shadow:0 8px 20px rgba(181,38,43,0.35);
+  }
+  .btn-outline{
+    background:var(--cream-card);
+    color:var(--green);
+    border-color:var(--green);
+  }
+
+  .info-strip{
+    background:var(--cream-card);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+  }
+  .info-item{
+    padding:24px 20px;
+    text-align:center;
+    border-right:1px solid var(--line);
+  }
+  .info-item:last-child{border-right:none;}
+  .info-item .ic{color:var(--red); margin-bottom:8px;}
+  .info-item h3{font-size:1rem; color:var(--green); margin-bottom:4px;}
+  .info-item p{margin:0; font-size:0.92rem; color:var(--ink-soft); line-height:1.4;}
+
+  @media (max-width:760px){
+    .info-grid{grid-template-columns:repeat(2,1fr);}
+    .info-item{border-right:none; border-bottom:1px solid var(--line);}
+  }
+
+  .section{padding:64px 0;}
+  .section-head{
+    text-align:center;
+    margin-bottom:38px;
+  }
+  .section-head .eyebrow{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    color:var(--red);
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-size:0.82rem;
+  }
+  .section-head h2{
+    font-family:'Pacifico', cursive;
+    font-weight:400;
+    color:var(--green);
+    font-size:clamp(2rem,5vw,2.8rem);
+    margin-top:4px;
+  }
+  .section-head .rule{
+    width:120px;
+    height:4px;
+    margin:14px auto 0;
+    background:repeating-linear-gradient(90deg, var(--red) 0 10px, var(--green) 10px 20px);
+    border-radius:2px;
+  }
+
+  .specials-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+    gap:18px;
+  }
+  .special-card{
+    background:var(--cream-card);
+    border-radius:var(--radius);
+    padding:22px;
+    box-shadow:var(--shadow);
+    border-top:5px solid var(--gold);
+  }
+  .special-card h3{
+    color:var(--green);
+    font-size:1.08rem;
+    line-height:1.25;
+    margin-bottom:10px;
+  }
+  .special-card .price{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:800;
+    color:var(--red);
+    font-size:1.7rem;
+  }
+  .special-card .price small{font-size:0.9rem; font-weight:700; color:var(--ink-soft);}
+  .special-card .fine{font-size:0.78rem; color:var(--ink-soft); margin-top:6px;}
+
+  .week-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+    gap:14px;
+    margin-top:34px;
+  }
+  .week-card{
+    background:var(--green);
+    color:#fff;
+    border-radius:14px;
+    padding:18px 14px;
+    text-align:center;
+  }
+  .week-card .day{
+    font-family:'Baloo 2', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    font-size:0.75rem;
+    color:var(--gold);
+    font-weight:700;
+  }
+  .week-card .dish{
+    font-weight:700;
+    margin:6px 0;
+    font-size:0.95rem;
+    line-height:1.3;
+  }
+  .week-card .price{
+    font-family:'Baloo 2', sans-serif;
+    font-size:1.3rem;
+    font-weight:800;
+  }
+
+  .menu-section{background:var(--cream-card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .tabs{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:36px;
+  }
+  .tab-btn{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    font-size:0.9rem;
+    padding:10px 18px;
+    border-radius:999px;
+    border:2px solid var(--green);
+    background:transparent;
+    color:var(--green);
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .tab-btn.active, .tab-btn:hover{
+    background:var(--green);
+    color:#fff;
+  }
+  .menu-panel{display:none;}
+  .menu-panel.active{display:block; animation:fade .25s ease;}
+  @keyframes fade{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);}}
+
+  .menu-note{
+    text-align:center;
+    color:var(--ink-soft);
+    font-style:italic;
+    font-size:0.92rem;
+    margin-bottom:26px;
+  }
+
+  .menu-list{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:0 40px;
+  }
+  @media (max-width:760px){ .menu-list{grid-template-columns:1fr;} }
+
+  .menu-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:12px;
+    padding:13px 0;
+    border-bottom:1px dashed var(--line);
+  }
+  .menu-item .left{flex:1;}
+  .menu-item .name{
+    font-weight:700;
+    color:var(--ink);
+    font-size:1rem;
+  }
+  .menu-item .desc{
+    color:var(--ink-soft);
+    font-size:0.84rem;
+    margin-top:2px;
+    line-height:1.35;
+  }
+  .menu-item .price{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    color:var(--red);
+    white-space:nowrap;
+    font-size:1rem;
+  }
+
+  .subhead{
+    font-family:'Baloo 2', sans-serif;
+    color:var(--gold);
+    background:var(--green);
+    display:inline-block;
+    padding:4px 14px;
+    border-radius:999px;
+    font-size:0.8rem;
+    font-weight:700;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    margin:26px 0 8px;
+  }
+
+  .toppings-box{
+    background:#fdf3d6;
+    border:1px dashed var(--gold);
+    border-radius:14px;
+    padding:18px 20px;
+    margin:26px 0;
+    font-size:0.9rem;
+    color:var(--ink-soft);
+  }
+  .toppings-box b{color:var(--green);}
+
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:44px;
+    align-items:center;
+  }
+  @media (max-width:800px){ .about-grid{grid-template-columns:1fr;} }
+  .about-grid h2{
+    font-family:'Pacifico', cursive;
+    color:var(--green);
+    font-size:2.2rem;
+    margin-bottom:14px;
+  }
+  .about-grid p{color:var(--ink-soft); line-height:1.7; margin-bottom:14px;}
+  .photo-stack{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .photo-card{
+    background:var(--green);
+    border-radius:16px;
+    padding:34px 20px;
+    color:#fff;
+    text-align:center;
+    box-shadow:var(--shadow);
+  }
+  .photo-card.alt{background:var(--red);}
+  .photo-card .big{font-family:'Baloo 2',sans-serif; font-size:2.2rem; font-weight:800; color:var(--gold);}
+  .photo-card small{opacity:0.85;}
+
+  .order-section{
+    background:var(--green);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  }
+  .order-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+  }
+  @media (max-width:800px){ .order-grid{grid-template-columns:1fr; text-align:center;} }
+  .order-grid h2{
+    font-family:'Pacifico', cursive;
+    font-size:2.4rem;
+    color:var(--gold);
+    margin-bottom:14px;
+  }
+  .order-grid p{opacity:0.9; line-height:1.7; margin-bottom:22px;}
+  .order-card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:var(--radius);
+    padding:30px;
+  }
+  .order-card .row{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    margin-bottom:18px;
+  }
+  .order-card .row .ic{color:var(--gold); flex-shrink:0; margin-top:2px;}
+  .order-card .row h4{font-family:'Baloo 2',sans-serif; margin-bottom:2px; font-size:1rem;}
+  .order-card .row p{margin:0; opacity:0.85; font-size:0.92rem;}
+  .order-card .row a{color:#fff; text-decoration:underline;}
+
+  footer{
+    background:var(--ink);
+    color:rgba(255,255,255,0.7);
+    text-align:center;
+    padding:28px 20px;
+    font-size:0.85rem;
+  }
+  footer .crown-mini{width:26px; margin:0 auto 10px; color:var(--gold);}
+  footer b{color:#fff;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .menu-panel.active{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="deliver-label">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h13l-4-4m4 4-4 4M17 6h1a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3h-1"/></svg>
+      <span data-i18n="we_deliver">We Deliver</span>
+    </div>
+    <div class="right-cluster">
+      <div class="calls">
+        <a href="tel:+16093005138">📞 (609) 300-5138</a>
+        <a href="tel:+16093506392">📞 (609) 350-6392</a>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Language / Idioma">
+        <span class="globe-ic" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </span>
+        <button type="button" class="lang-btn" data-lang="en" aria-label="View site in English">English</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-label="Ver el sitio en Español">Español</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<header class="hero patterned">
+  <div class="crown-wrap">
+    <svg viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 50 L10 15 L28 35 L50 8 L72 35 L90 15 L95 50 Z" fill="currentColor"/>
+      <circle cx="10" cy="15" r="5" fill="currentColor"/>
+      <circle cx="50" cy="8" r="5" fill="currentColor"/>
+      <circle cx="90" cy="15" r="5" fill="currentColor"/>
+      <rect x="5" y="50" width="90" height="8" rx="2" fill="currentColor"/>
+    </svg>
+  </div>
+  <div class="brand-sub" data-i18n="brand_sub">We Deliver &middot; Est. Atlantic City</div>
+  <h1 class="brand-name">Family Pizza</h1>
+
+  <svg class="wave-divider" viewBox="0 0 220 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 10 Q 18 0 36 10 T 72 10 T 108 10 T 144 10 T 180 10 T 220 10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  </svg>
+
+  <p class="tagline" data-i18n="tagline">Pizza, pasta, subs, wings, and a full Latino kitchen — all made fresh at 2416 Atlantic Ave and delivered right to your door, 11am to 3am, every single day.</p>
+
+  <div class="hero-ctas">
+    <a href="tel:+16093005138" class="btn btn-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span data-i18n="call_to_order">Call to Order</span>
+    </a>
+    <a href="#menu" class="btn btn-outline" data-i18n="see_full_menu">See Full Menu</a>
+  </div>
+</header>
+
+<div class="info-strip">
+  <div class="container">
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3 data-i18n="hours">Hours</h3>
+        <p data-i18n-html="hours_detail">11:00 AM – 3:00 AM<br>Every day</p>
+      </div>
+      <div class="info-item">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3 data-i18n="location">Location</h3>
+        <p data-i18n-html="location_detail">2416 Atlantic Ave<br>Atlantic City, NJ 08401</p>
+      </div>
+      <div class="info-item">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <h3 data-i18n="phone">Phone</h3>
+        <p data-i18n-html="phone_detail">(609) 300-5138<br>(609) 350-6392</p>
+      </div>
+      <div class="info-item">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h13l-4-4m4 4-4 4M17 6h1a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3h-1"/></svg></div>
+        <h3 data-i18n="delivery">Delivery</h3>
+        <p data-i18n-html="delivery_detail">We deliver daily<br><span style="font-size:0.78rem">(delivery fee applies)</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="specials">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="deals">Deals</div>
+      <h2 data-i18n="everyday_specials">Everyday Specials</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="specials-grid" id="specials-grid"></div>
+
+    <div class="section-head" style="margin-top:56px;">
+      <div class="eyebrow" data-i18n="this_week">This Week</div>
+      <h2 data-i18n="daily_specials">Daily Specials</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="week-grid" id="week-grid"></div>
+  </div>
+</section>
+
+<section class="section menu-section" id="menu">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="kitchen">Kitchen</div>
+      <h2 data-i18n="our_menu">Our Menu</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="tabs" id="tabs"></div>
+    <div id="panels"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <h2 data-i18n="about_h2">A family kitchen, three ways</h2>
+        <p data-i18n="about_p1">Family Pizza has been feeding Atlantic City on Atlantic Ave with a menu that doesn't sit still — hand-tossed pizza and calzones, red-sauce Italian classics like chicken parm and baked ziti, and a full Latino kitchen with tacos, tortas, burritos, and enchiladas, all under one roof.</p>
+        <p data-i18n="about_p2">Open 11am to 3am every day, we're the late-night stop for a slice, a cheesesteak, or a plate of birria tacos — plus breakfast served all day, from omelettes to pancakes.</p>
+        <p><em data-i18n="about_p3">Have great photos of your food or storefront? Swap them in here — this section is built to hold two feature images side by side.</em></p>
+      </div>
+      <div class="photo-stack">
+        <div class="photo-card"><div class="big">25+</div><small data-i18n="photo1">menu categories, one kitchen</small></div>
+        <div class="photo-card alt"><div class="big">11am–3am</div><small data-i18n="photo2">open every single day</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section order-section" id="order">
+  <div class="container">
+    <div class="order-grid">
+      <div>
+        <h2 data-i18n="order_h2">Order tonight</h2>
+        <p data-i18n="order_p">Call ahead for pickup or delivery — our phones are open the same hours we are. Delivery runs across Atlantic City with a small delivery fee.</p>
+        <a href="tel:+16093005138" class="btn btn-primary" style="background:var(--gold); color:var(--ink);"><span data-i18n="order_btn">Call (609) 300-5138</span></a>
+      </div>
+      <div class="order-card">
+        <div class="row">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h4 data-i18n="address">Address</h4><p>2416 Atlantic Ave, Atlantic City, NJ 08401</p>
+          <p><a href="https://www.google.com/maps/search/?api=1&query=Family+Pizza+2416+Atlantic+Ave+Atlantic+City+NJ+08401" target="_blank" rel="noopener" data-i18n="directions">Get directions on Google Maps →</a></p></div>
+        </div>
+        <div class="row">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><h4 data-i18n="hours">Hours</h4><p data-i18n="open_daily">Open daily, 11:00 AM – 3:00 AM</p></div>
+        </div>
+        <div class="row">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><h4 data-i18n="phone">Phone</h4><p><a href="tel:+16093005138">(609) 300-5138</a> &nbsp;/&nbsp; <a href="tel:+16093506392">(609) 350-6392</a></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="crown-mini">
+    <svg viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 50 L10 15 L28 35 L50 8 L72 35 L90 15 L95 50 Z" fill="currentColor"/>
+      <rect x="5" y="50" width="90" height="8" rx="2" fill="currentColor"/>
+    </svg>
+  </div>
+  <p><b>Family Pizza</b> · 2416 Atlantic Ave, Atlantic City, NJ 08401 · (609) 300-5138 / (609) 350-6392</p>
+  <p data-i18n="footer_note">Open every day, 11:00 AM – 3:00 AM · Prices subject to change without notice, please confirm at time of order.</p>
+</footer>
+
+<script>
+/* ===================== TRANSLATIONS: static UI strings ===================== */
+const I18N = {
+  we_deliver: { en:"We Deliver", es:"Hacemos Entregas" },
+  brand_sub: { en:"We Deliver &middot; Est. Atlantic City", es:"Hacemos Entregas &middot; Atlantic City" },
+  tagline: { en:"Pizza, pasta, subs, wings, and a full Latino kitchen — all made fresh at 2416 Atlantic Ave and delivered right to your door, 11am to 3am, every single day.",
+             es:"Pizza, pasta, subs, alitas y una cocina latina completa — todo preparado fresco en 2416 Atlantic Ave y entregado directo a tu puerta, de 11am a 3am, todos los días." },
+  call_to_order: { en:"Call to Order", es:"Llamar para Ordenar" },
+  see_full_menu: { en:"See Full Menu", es:"Ver Menú Completo" },
+  hours: { en:"Hours", es:"Horario" },
+  hours_detail: { en:"11:00 AM – 3:00 AM<br>Every day", es:"11:00 AM – 3:00 AM<br>Todos los días" },
+  location: { en:"Location", es:"Ubicación" },
+  location_detail: { en:"2416 Atlantic Ave<br>Atlantic City, NJ 08401", es:"2416 Atlantic Ave<br>Atlantic City, NJ 08401" },
+  phone: { en:"Phone", es:"Teléfono" },
+  phone_detail: { en:"(609) 300-5138<br>(609) 350-6392", es:"(609) 300-5138<br>(609) 350-6392" },
+  delivery: { en:"Delivery", es:"Entrega" },
+  delivery_detail: { en:'We deliver daily<br><span style="font-size:0.78rem">(delivery fee applies)</span>',
+                      es:'Entregamos todos los días<br><span style="font-size:0.78rem">(aplica costo de envío)</span>' },
+  deals: { en:"Deals", es:"Ofertas" },
+  everyday_specials: { en:"Everyday Specials", es:"Especiales de Todos los Días" },
+  this_week: { en:"This Week", es:"Esta Semana" },
+  daily_specials: { en:"Daily Specials", es:"Especiales del Día" },
+  kitchen: { en:"Kitchen", es:"Cocina" },
+  our_menu: { en:"Our Menu", es:"Nuestro Menú" },
+  about_h2: { en:"A family kitchen, three ways", es:"Una cocina familiar, tres estilos" },
+  about_p1: { en:"Family Pizza has been feeding Atlantic City on Atlantic Ave with a menu that doesn't sit still — hand-tossed pizza and calzones, red-sauce Italian classics like chicken parm and baked ziti, and a full Latino kitchen with tacos, tortas, burritos, and enchiladas, all under one roof.",
+              es:"Family Pizza lleva alimentando a Atlantic City desde Atlantic Ave con un menú que no se queda quieto — pizza y calzones hechos a mano, clásicos italianos en salsa roja como pollo a la parmesana y ziti al horno, y una cocina latina completa con tacos, tortas, burritos y enchiladas, todo bajo un mismo techo." },
+  about_p2: { en:"Open 11am to 3am every day, we're the late-night stop for a slice, a cheesesteak, or a plate of birria tacos — plus breakfast served all day, from omelettes to pancakes.",
+              es:"Abiertos de 11am a 3am todos los días, somos la parada nocturna para una rebanada, un cheesesteak o un plato de tacos de birria — además de desayuno servido todo el día, desde omelettes hasta panqueques." },
+  about_p3: { en:"Have great photos of your food or storefront? Swap them in here — this section is built to hold two feature images side by side.",
+              es:"¿Tienes buenas fotos de tu comida o de tu local? Colócalas aquí — esta sección está diseñada para mostrar dos imágenes destacadas lado a lado." },
+  photo1: { en:"menu categories, one kitchen", es:"categorías de menú, una cocina" },
+  photo2: { en:"open every single day", es:"abierto todos los días" },
+  order_h2: { en:"Order tonight", es:"Ordena esta noche" },
+  order_p: { en:"Call ahead for pickup or delivery — our phones are open the same hours we are. Delivery runs across Atlantic City with a small delivery fee.",
+             es:"Llama con anticipación para recoger o para entrega — nuestros teléfonos están disponibles en el mismo horario que la tienda. Entregamos por todo Atlantic City con un pequeño costo de envío." },
+  order_btn: { en:"Call (609) 300-5138", es:"Llamar (609) 300-5138" },
+  address: { en:"Address", es:"Dirección" },
+  directions: { en:"Get directions on Google Maps →", es:"Obtener direcciones en Google Maps →" },
+  open_daily: { en:"Open daily, 11:00 AM – 3:00 AM", es:"Abierto todos los días, 11:00 AM – 3:00 AM" },
+  footer_note: { en:"Open every day, 11:00 AM – 3:00 AM · Prices subject to change without notice, please confirm at time of order.",
+                 es:"Abierto todos los días, 11:00 AM – 3:00 AM · Los precios están sujetos a cambios sin previo aviso, por favor confirme al momento de ordenar." },
+};
+
+/* ===================== EVERYDAY SPECIALS ===================== */
+const SPECIALS = [
+  { en:"1 Large Pizza & 10 Wings", es:"1 Pizza Grande y 10 Alitas", price:"$27", fine:{en:"Toppings extra · not valid with other offers", es:"Ingredientes extra · no válido con otras ofertas"} },
+  { en:"3 Large Pizzas", es:"3 Pizzas Grandes", price:"$45", fine:{en:"Toppings extra · not valid with other offers", es:"Ingredientes extra · no válido con otras ofertas"} },
+  { en:"1 Large Pizza, Whole Cheesesteak & 2-Liter Soda", es:"1 Pizza Grande, Cheesesteak Entero y Refresco de 2 Litros", price:"$40", fine:{en:"Toppings extra · not valid with other offers", es:"Ingredientes extra · no válido con otras ofertas"} },
+  { en:"2 Medium Pizzas & 10 Wings", es:"2 Pizzas Medianas y 10 Alitas", price:"$40", fine:{en:"Toppings extra · not valid with other offers", es:"Ingredientes extra · no válido con otras ofertas"} },
+  { en:"2 Large Pizzas & 2-Liter Soda", es:"2 Pizzas Grandes y Refresco de 2 Litros", price:"$35", fine:{en:"Toppings extra · not valid with other offers", es:"Ingredientes extra · no válido con otras ofertas"} },
+  { en:"1 Large Pizza, Fries & 2-Liter Soda", es:"1 Pizza Grande, Papas Fritas y Refresco de 2 Litros", price:"$24", fine:{en:"Toppings extra · not valid with other offers", es:"Ingredientes extra · no válido con otras ofertas"} },
+  { en:"1 Large Pizza, 12 Wings & 2-Liter Soda", es:"1 Pizza Grande, 12 Alitas y Refresco de 2 Litros", price:"$33", fine:{en:"Toppings extra · not valid with other offers", es:"Ingredientes extra · no válido con otras ofertas"} },
+  { en:"2 Medium Pizzas", es:"2 Pizzas Medianas", price:"$26", fine:{en:"Toppings extra · not valid with other offers", es:"Ingredientes extra · no válido con otras ofertas"} },
+  { en:"2 Large Pizzas", es:"2 Pizzas Grandes", price:"$30", fine:{en:"Toppings extra · not valid with other offers", es:"Ingredientes extra · no válido con otras ofertas"} },
+  { en:"6 Wings, Fries & 1 Can Soda", es:"6 Alitas, Papas Fritas y 1 Refresco en Lata", price:"$12.50", fine:{en:"Not valid with other offers", es:"No válido con otras ofertas"} },
+  { en:"Cheeseburger, Fries & 1 Can Soda", es:"Hamburguesa con Queso, Papas Fritas y 1 Refresco en Lata", price:"$14", fine:{en:"Not valid with other offers", es:"No válido con otras ofertas"} },
+  { en:"½ Cheesesteak, Fries & 1 Can Soda", es:"½ Cheesesteak, Papas Fritas y 1 Refresco en Lata", price:"$15", fine:{en:"Not valid with other offers", es:"No válido con otras ofertas"} },
+  { en:"Crispy Chicken Sandwich, Fries & 1 Can Soda", es:"Sándwich de Pollo Crujiente, Papas Fritas y 1 Refresco en Lata", price:"$14", fine:{en:"Not valid with other offers", es:"No válido con otras ofertas"} },
+  { en:"Bacon Crispy Chicken Sandwich, Fries & 1 Can Soda", es:"Sándwich de Pollo Crujiente con Tocino, Papas Fritas y 1 Refresco en Lata", price:"$14", fine:{en:"Not valid with other offers", es:"No válido con otras ofertas"} },
+  { en:"Fish Sandwich, Fries & 1 Can Soda", es:"Sándwich de Pescado, Papas Fritas y 1 Refresco en Lata", price:"$13", fine:{en:"Not valid with other offers", es:"No válido con otras ofertas"} },
+];
+
+/* ===================== WEEKLY / DAILY SPECIALS ===================== */
+const WEEK = [
+  { day:{en:"Monday", es:"Lunes"}, dish:{en:"Chicken Parmigiana (Spaghetti)", es:"Pollo a la Parmesana (Espagueti)"}, price:"$15" },
+  { day:{en:"Tuesday", es:"Martes"}, dish:{en:"Spaghetti & Meatballs", es:"Espagueti con Albóndigas"}, price:"$15" },
+  { day:{en:"Wednesday", es:"Miércoles"}, dish:{en:"Baked Ziti", es:"Ziti al Horno"}, price:"$12.50" },
+  { day:{en:"Thursday", es:"Jueves"}, dish:{en:"Chicken Spaghetti alla Vodka", es:"Espagueti de Pollo a la Vodka"}, price:"$18" },
+  { day:{en:"Friday", es:"Viernes"}, dish:{en:"Chicken Alfredo (Spaghetti)", es:"Pollo Alfredo (Espagueti)"}, price:"$18" },
+  { day:{en:"Saturday", es:"Sábado"}, dish:{en:"Lasagna", es:"Lasaña"}, price:"$15" },
+  { day:{en:"Sunday", es:"Domingo"}, dish:{en:"Veal Parmigiana (Spaghetti)", es:"Ternera a la Parmesana (Espagueti)"}, price:"$15" },
+];
+
+/* ===================== MENU ===================== */
+const MENU = [
+  {
+    id:"pizza", label:{en:"Pizza", es:"Pizza"},
+    note:{en:"All pizzas made fresh to order. Prices shown as Medium / Large.", es:"Todas las pizzas se preparan frescas al pedido. Precios mostrados como Mediana / Grande."},
+    items:[
+      {n:{en:"Plain",es:"Sencilla"}, p:"$14 / $16"},
+      {n:{en:"Toppings (each)",es:"Ingredientes (c/u)"}, p:"+$2 / +$4"},
+      {n:{en:"Chicken Pizza",es:"Pizza de Pollo"}, p:"$17 / $20"},
+      {n:{en:"BBQ Chicken Pizza",es:"Pizza de Pollo BBQ"}, p:"$17 / $20"},
+      {n:{en:"Buffalo Chicken Pizza",es:"Pizza de Pollo Buffalo"}, p:"$17 / $20"},
+      {n:{en:"Philly Pizza",es:"Pizza Philly"}, d:{en:"Onions, green peppers, mushrooms", es:"Cebolla, pimiento verde, champiñones"}, p:"$20 / $23"},
+      {n:{en:"White Pizza",es:"Pizza Blanca"}, d:{en:"Tomatoes, broccoli", es:"Tomate, brócoli"}, p:"$17 / $24"},
+      {n:{en:"Meatlovers Pizza",es:"Pizza Carnívora"}, d:{en:"Pepperoni, sausage, ground beef, ham", es:"Pepperoni, salchicha, carne molida, jamón"}, p:"$23 / $28"},
+      {n:{en:"Veggie Pizza",es:"Pizza Vegetariana"}, p:"$23 / $28"},
+      {n:{en:"Hawaiian Pizza",es:"Pizza Hawaiana"}, p:"$18 / $23"},
+      {n:{en:"Oaxaqueña",es:"Oaxaqueña"}, p:"$22 / $28"},
+      {n:{en:"Supreme",es:"Suprema"}, p:"$22 / $28"},
+      {n:{en:"Al Pastor Pizza",es:"Pizza al Pastor"}, p:"$22 / $28"},
+      {n:{en:"Pizza Rachero",es:"Pizza Ranchero"}, d:{en:"Steak, fried onions, mozzarella, jalapeños", es:"Bistec, cebolla frita, mozzarella, jalapeños"}, p:"$22 / $28"},
+      {n:{en:"Slice of Pizza",es:"Rebanada de Pizza"}, d:{en:"Toppings extra", es:"Ingredientes extra"}, p:"$3.50"},
+    ],
+    extra:{
+      en:`<div class="toppings-box"><b>Toppings:</b> Pepperoni, Sausage, Meatball, Ham, Bacon, Ground Beef, Chicken, Broccoli, Tomatoes, Spinach, Jalapeño, Black Olives, Green Peppers, Pineapple, Mushrooms, Anchovies, Ricotta Cheese, Extra Cheese.<br><b>Extra toppings:</b> Medium $2 ea · Large $4 ea.</div>`,
+      es:`<div class="toppings-box"><b>Ingredientes:</b> Pepperoni, salchicha, albóndiga, jamón, tocino, carne molida, pollo, brócoli, tomate, espinaca, jalapeño, aceitunas negras, pimiento verde, piña, champiñones, anchoas, queso ricotta, queso extra.<br><b>Ingredientes extra:</b> Mediana $2 c/u · Grande $4 c/u.</div>`
+    }
+  },
+  {
+    id:"calzones", label:{en:"Calzones & Strombolis", es:"Calzones y Strombolis"},
+    items:[
+      {n:{en:"Calzone",es:"Calzone"}, p:"$16"},
+      {n:{en:"Spinach Calzone",es:"Calzone de Espinaca"}, p:"$16"},
+      {n:{en:"Broccoli Calzone",es:"Calzone de Brócoli"}, p:"$16"},
+      {n:{en:"Vegetable Stromboli",es:"Stromboli de Vegetales"}, p:"$18"},
+      {n:{en:"Steak Stromboli",es:"Stromboli de Bistec"}, p:"$18"},
+      {n:{en:"Sausage, Pepperoni & Mozzarella Stromboli",es:"Stromboli de Salchicha, Pepperoni y Mozzarella"}, p:"$18"},
+      {n:{en:"Meatlovers Stromboli",es:"Stromboli Carnívoro"}, p:"$21"},
+      {n:{en:"Grilled Chicken Stromboli",es:"Stromboli de Pollo a la Parrilla"}, p:"$18"},
+    ]
+  },
+  {
+    id:"wings", label:{en:"Wings & Apps", es:"Alitas y Entradas"},
+    items:[
+      {n:{en:"6 Wings with French Fries",es:"6 Alitas con Papas Fritas"}, p:"$12"},
+      {n:{en:"10 Wings with French Fries",es:"10 Alitas con Papas Fritas"}, p:"$17"},
+      {n:{en:"12 Wings with French Fries",es:"12 Alitas con Papas Fritas"}, p:"$18"},
+      {n:{en:"15 Wings with French Fries",es:"15 Alitas con Papas Fritas"}, p:"$20"},
+      {n:{en:"20 Wings with French Fries",es:"20 Alitas con Papas Fritas"}, p:"$30"},
+      {n:{en:"Chicken Fingers (5 pcs)",es:"Dedos de Pollo (5 pzas)"}, d:{en:"Served with french fries", es:"Servido con papas fritas"}, p:"$12.50"},
+      {n:{en:"Chicken Wings (6 pc)",es:"Alitas de Pollo (6 pzas)"}, p:"$7"},
+      {n:{en:"Nachos",es:"Nachos"}, d:{en:"Choice of chicken, beef, or chorizo — black beans, jalapeños, mixed cheese, pico de gallo", es:"Elige pollo, res o chorizo — frijoles negros, jalapeños, mezcla de quesos, pico de gallo"}, p:"$18"},
+      {n:{en:"Mixtos",es:"Mixtos"}, p:"$20"},
+      {n:{en:"Quesadillas",es:"Quesadillas"}, d:{en:"Choice of chicken, beef, or chorizo — served with salsa & sour cream", es:"Elige pollo, res o chorizo — servidas con salsa y crema"}, p:"$13"},
+      {n:{en:"Mozzarella Sticks",es:"Palitos de Mozzarella"}, d:{en:"Served with marinara sauce", es:"Servidos con salsa marinara"}, p:"$7.50"},
+      {n:{en:"Onion Rings",es:"Aros de Cebolla"}, p:"$6"},
+      {n:{en:"Chicken Tenders (5) and Fries",es:"Tiras de Pollo (5) con Papas Fritas"}, p:"$13"},
+      {n:{en:"Small French Fries",es:"Papas Fritas Chicas"}, p:"$5"},
+      {n:{en:"Large French Fries",es:"Papas Fritas Grandes"}, p:"$7.50"},
+    ]
+  },
+  {
+    id:"salads", label:{en:"Salads", es:"Ensaladas"},
+    note:{en:"Choice of dressing.", es:"Elige tu aderezo."},
+    items:[
+      {n:{en:"Tossed Salad",es:"Ensalada Mixta"}, d:{en:"Lettuce, tomatoes, cucumbers, onions, olives", es:"Lechuga, tomate, pepino, cebolla, aceitunas"}, p:"$10"},
+      {n:{en:"Grilled Chicken Caesar Salad",es:"Ensalada César con Pollo a la Parrilla"}, p:"$14"},
+      {n:{en:"Chef Salad",es:"Ensalada Chef"}, p:"$14"},
+      {n:{en:"Tuna Salad",es:"Ensalada de Atún"}, p:"$14"},
+      {n:{en:"Antipasto Salad",es:"Ensalada Antipasto"}, p:"$14"},
+      {n:{en:"Turkey & Cheese Salad",es:"Ensalada de Pavo y Queso"}, p:"$14"},
+    ]
+  },
+  { id:"subs", label:{en:"Subs & Burgers", es:"Subs y Hamburguesas"}, items:[] },
+  {
+    id:"pasta", label:{en:"Pasta & Entrees", es:"Pasta y Platos Principales"},
+    note:{en:"Pasta dishes served with salad and bread.", es:"Los platos de pasta se sirven con ensalada y pan."},
+    items:[
+      {n:{en:"Chicken Parmigiana",es:"Pollo a la Parmesana"}, d:{en:"Red sauce, mozzarella, side of pasta", es:"Salsa roja, mozzarella, con pasta"}, p:"$16"},
+      {n:{en:"Veal Parmigiana",es:"Ternera a la Parmesana"}, d:{en:"Red sauce, mozzarella, side of pasta", es:"Salsa roja, mozzarella, con pasta"}, p:"$16"},
+      {n:{en:"Chicken Alfredo",es:"Pollo Alfredo"}, d:{en:"White cream sauce, parmesan, over choice of pasta", es:"Salsa blanca cremosa, parmesano, sobre pasta a elección"}, p:"$23"},
+      {n:{en:"Chicken and Shrimp fra Diabla",es:"Pollo y Camarón fra Diabla"}, d:{en:"Spicy red sauce, choice of pasta", es:"Salsa roja picante, pasta a elección"}, p:"$22"},
+      {n:{en:"Spaghetti with Meatball",es:"Espagueti con Albóndiga"}, p:"$16"},
+      {n:{en:"Spaghetti with Italian Sausage",es:"Espagueti con Salchicha Italiana"}, p:"$16"},
+      {n:{en:"Spaghetti with Clams",es:"Espagueti con Almejas"}, d:{en:"Red or white", es:"Roja o blanca"}, p:"$18"},
+      {n:{en:"Spaghetti with Shrimp and Clams",es:"Espagueti con Camarón y Almejas"}, p:"$25"},
+      {n:{en:"Spaghetti with Shrimp",es:"Espagueti con Camarón"}, d:{en:"Red or white", es:"Roja o blanca"}, p:"$23"},
+      {n:{en:"Spaghetti with Shrimp in Alfredo Sauce",es:"Espagueti con Camarón en Salsa Alfredo"}, p:"$23"},
+      {n:{en:"Spaghetti in Garlic and Oil",es:"Espagueti en Ajo y Aceite"}, p:"$13.50"},
+      {n:{en:"Spaghetti in Tomato Sauce",es:"Espagueti en Salsa de Tomate"}, p:"$13.50"},
+      {n:{en:"Baked Ziti",es:"Ziti al Horno"}, d:{en:"Ricotta & mozzarella", es:"Ricotta y mozzarella"}, p:"$15"},
+      {n:{en:"Pasta ala Vodka",es:"Pasta a la Vodka"}, d:{en:"Shrimp or chicken, cream or vodka sauce", es:"Camarón o pollo, salsa cremosa o de vodka"}, p:"$23"},
+      {n:{en:"Cheese Ravioli",es:"Ravioles de Queso"}, d:{en:"Served in red sauce", es:"Servidos en salsa roja"}, p:"$14"},
+      {n:{en:"Stuffed Shells",es:"Conchas Rellenas"}, d:{en:"Baked in red sauce and cheese", es:"Horneadas en salsa roja y queso"}, p:"$14"},
+      {n:{en:"Manicotti",es:"Manicotti"}, d:{en:"Baked in red sauce and cheese", es:"Horneado en salsa roja y queso"}, p:"$14"},
+      {n:{en:"Shrimp Scampi (pasta)",es:"Camarón Scampi (pasta)"}, p:{en:"Ask in-store", es:"Preguntar en tienda"}},
+      {n:{en:"Chicken, Broccoli, Garlic & Spaghetti",es:"Pollo, Brócoli, Ajo y Espagueti"}, p:{en:"Ask in-store", es:"Preguntar en tienda"}},
+      {n:{en:"Alfredo with Broccoli",es:"Alfredo con Brócoli"}, p:{en:"Ask in-store", es:"Preguntar en tienda"}},
+    ]
+  },
+  {
+    id:"seafood", label:{en:"Seafood", es:"Mariscos"},
+    items:[
+      {n:{en:"Seafood Soup",es:"Sopa de Mariscos"}, d:{en:"Shrimp, scallops, clams, mussels & fish in spicy tomato broth, served with corn tortilla", es:"Camarón, callo de hacha, almeja, mejillón y pescado en caldo de tomate picante, servido con tortilla de maíz"}, p:"$20"},
+      {n:{en:"Camarones a la Diabla",es:"Camarones a la Diabla"}, d:{en:"Jumbo shrimp in red tomato spicy sauce over pasta", es:"Camarón jumbo en salsa roja de tomate picante sobre pasta"}, p:"$18"},
+      {n:{en:"Shrimp in a Basket",es:"Camarón en Canasta"}, d:{en:"Jumbo fried shrimp breaded and fried, with french fries", es:"Camarón jumbo empanizado y frito, con papas fritas"}, p:"$16"},
+      {n:{en:"Fried Flounder",es:"Lenguado Frito"}, d:{en:"Served with french fries and tartar sauce", es:"Servido con papas fritas y salsa tártara"}, p:"$18"},
+      {n:{en:"Shrimp Scampi",es:"Camarón Scampi"}, p:"$20"},
+    ]
+  },
+  {
+    id:"latino", label:{en:"Latino Kitchen", es:"Cocina Latina"},
+    note:{en:"Tacos, tortas, burritos, and Latino sides.", es:"Tacos, tortas, burritos y acompañantes latinos."},
+    items:[
+      {n:{en:"Tacos de Bistec",es:"Tacos de Bistec"}, d:{en:"Beef", es:"Res"}, p:"$16"},
+      {n:{en:"Tacos de Chorizo",es:"Tacos de Chorizo"}, p:"$16"},
+      {n:{en:"Tacos de Birria",es:"Tacos de Birria"}, p:"$16"},
+      {n:{en:"Tacos de Pollo",es:"Tacos de Pollo"}, d:{en:"Chicken", es:"Pollo"}, p:"$16"},
+      {n:{en:"Tacos de Carnitas",es:"Tacos de Carnitas"}, p:"$16"},
+      {n:{en:"Tacos de Lengua",es:"Tacos de Lengua"}, p:"$22"},
+      {n:{en:"Tacos de Alambre",es:"Tacos de Alambre"}, d:{en:"Choice of meat with poblano peppers, bacon, onion & cheese", es:"Elige la carne con chile poblano, tocino, cebolla y queso"}, p:"$16"},
+      {n:{en:"Tacos Barbacoa de Res",es:"Tacos Barbacoa de Res"}, p:{en:"Ask in-store", es:"Preguntar en tienda"}},
+      {n:{en:"Tacos de Carne Enchilada",es:"Tacos de Carne Enchilada"}, p:{en:"Ask in-store", es:"Preguntar en tienda"}},
+      {n:{en:"Bistec Ensebollado",es:"Bistec Ensebollado"}, d:{en:"Rib eye steak with onions, rice and beans", es:"Bistec de res con cebolla, arroz y frijoles"}, p:"$18"},
+      {n:{en:"Bistec ala Mexicana",es:"Bistec a la Mexicana"}, d:{en:"Steak with sautéed hot peppers, onions, tomato, rice and beans", es:"Bistec con chiles, cebolla y tomate salteados, arroz y frijoles"}, p:"$18"},
+      {n:{en:"Enchiladas Roja o Verde",es:"Enchiladas Roja o Verde"}, d:{en:"Stuffed chicken or beef topped with cheese & cream", es:"Rellenas de pollo o res, cubiertas con queso y crema"}, p:"$16"},
+      {n:{en:"Pork Chops",es:"Chuletas de Puerco"}, d:{en:"Fried, served with rice, beans & tostones", es:"Fritas, servidas con arroz, frijoles y tostones"}, p:{en:"Ask in-store", es:"Preguntar en tienda"}},
+      {n:{en:"Fajita",es:"Fajita"}, p:"$16"},
+      {n:{en:"Cocktail Camarón",es:"Cóctel de Camarón"}, p:"$17"},
+      {n:{en:"Sopa Marisco",es:"Sopa de Marisco"}, p:"$16"},
+      {n:{en:"Sopes",es:"Sopes"}, p:"$20"},
+      {n:{en:"Tacos Dorados",es:"Tacos Dorados"}, p:"$16"},
+      {n:{en:"Milanesa De Res",es:"Milanesa de Res"}, d:{en:"Torta, served with fries & a can of soda", es:"Torta, servida con papas fritas y un refresco en lata"}, p:"$14"},
+      {n:{en:"Milanesa de Pollo",es:"Milanesa de Pollo"}, d:{en:"Chicken torta, served with fries & a can of soda", es:"Torta de pollo, servida con papas fritas y un refresco en lata"}, p:"$14"},
+      {n:{en:"Cubana",es:"Cubana"}, d:{en:"Torta, served with fries & a can of soda", es:"Torta, servida con papas fritas y un refresco en lata"}, p:"$16"},
+      {n:{en:"Chorizo con Huevo",es:"Chorizo con Huevo"}, d:{en:"Torta, served with fries & a can of soda", es:"Torta, servida con papas fritas y un refresco en lata"}, p:"$14"},
+      {n:{en:"Jamon y Quesillo",es:"Jamón y Quesillo"}, d:{en:"Torta, served with fries & a can of soda", es:"Torta, servida con papas fritas y un refresco en lata"}, p:"$14"},
+      {n:{en:"Burrito Chicken or Beef",es:"Burrito de Pollo o Res"}, d:{en:"Served with chips & salsa", es:"Servido con totopos y salsa"}, p:"$12"},
+      {n:{en:"Vegetable Burrito",es:"Burrito de Vegetales"}, d:{en:"Guacamole, pico de gallo, served with chips & salsa", es:"Guacamole, pico de gallo, servido con totopos y salsa"}, p:"$12"},
+      {n:{en:"Shrimp Burrito",es:"Burrito de Camarón"}, d:{en:"Served with chips & salsa", es:"Servido con totopos y salsa"}, p:"$16"},
+    ]
+  },
+  {
+    id:"breakfast", label:{en:"Breakfast", es:"Desayuno"},
+    items:[
+      {n:{en:"Cheese Omelette",es:"Omelette de Queso"}, d:{en:"Served with home fries and toast", es:"Servido con papas y pan tostado"}, p:"$10"},
+      {n:{en:"Ham & Cheese Omelette",es:"Omelette de Jamón y Queso"}, p:"$12"},
+      {n:{en:"Vegetable Omelette",es:"Omelette de Vegetales"}, p:"$12"},
+      {n:{en:"Western Omelette",es:"Omelette Western"}, d:{en:"Ham, peppers & onions", es:"Jamón, pimientos y cebolla"}, p:"$13"},
+      {n:{en:"Scrambled Eggs, Home Fries & Bread",es:"Huevos Revueltos, Papas y Pan"}, p:"$8.50"},
+      {n:{en:"Scrambled Egg, Cheese & Home Fries",es:"Huevo Revuelto, Queso y Papas"}, p:"$9"},
+      {n:{en:"Scrambled Egg, Ham, Sausage & Bacon",es:"Huevo Revuelto, Jamón, Salchicha y Tocino"}, p:"$17"},
+      {n:{en:"Pancake (3)",es:"Panqueques (3)"}, p:"$7.50"},
+      {n:{en:"Pancake & Two Eggs",es:"Panqueques y Dos Huevos"}, d:{en:"Any style", es:"Al gusto"}, p:"$9"},
+      {n:{en:"French Toast",es:"Pan Francés"}, p:"$7.50"},
+      {n:{en:"French Toast & Two Eggs",es:"Pan Francés y Dos Huevos"}, d:{en:"Any style", es:"Al gusto"}, p:"$9"},
+      {n:{en:"Ham, Egg & Cheese Sandwich",es:"Sándwich de Jamón, Huevo y Queso"}, p:"$7.50"},
+      {n:{en:"Cheese & Egg Sandwich",es:"Sándwich de Queso y Huevo"}, p:"$7.50"},
+      {n:{en:"Bacon & Egg Sandwich",es:"Sándwich de Tocino y Huevo"}, p:"$7.50"},
+      {n:{en:"Sausage, Egg & Cheese Sandwich",es:"Sándwich de Salchicha, Huevo y Queso"}, p:"$7.50"},
+    ]
+  },
+  {
+    id:"extras", label:{en:"Sides, Desserts & Drinks", es:"Acompañantes, Postres y Bebidas"},
+    items:[
+      {n:{en:"Sausage (side)",es:"Salchicha (extra)"}, p:"$3"},
+      {n:{en:"Home Fries",es:"Papas Doradas"}, p:"$5"},
+      {n:{en:"Ham or Bacon (side)",es:"Jamón o Tocino (extra)"}, p:"$3"},
+      {n:{en:"Turkey Bacon",es:"Tocino de Pavo"}, p:"$3"},
+      {n:{en:"Bread",es:"Pan"}, d:{en:"Choice of rye, wheat or white", es:"Elige centeno, integral o blanco"}, p:"$1"},
+      {n:{en:"Carrot Cake",es:"Pastel de Zanahoria"}, p:"$3.75"},
+      {n:{en:"Cheesecake",es:"Pastel de Queso"}, p:"$3.75"},
+      {n:{en:"Chocolate Cake",es:"Pastel de Chocolate"}, p:"$3.75"},
+      {n:{en:"Snapple",es:"Snapple"}, p:"$3"},
+      {n:{en:"Coke Products (can)",es:"Refrescos Coca-Cola (lata)"}, p:"$1.75"},
+      {n:{en:"2-Liter Soda",es:"Refresco de 2 Litros"}, p:"$4.75"},
+    ]
+  }
+];
+
+const SUBS_GROUPS = [
+  {h:{en:"Hot Subs & Wraps", es:"Subs y Wraps Calientes"}, items:[
+    {n:{en:"Steak",es:"Bistec"}, p:"$11"},{n:{en:"Cheesesteak",es:"Cheesesteak"}, p:"$11"},{n:{en:"Mushroom Cheesesteak",es:"Cheesesteak con Champiñones"}, p:"$11"},
+    {n:{en:"Pepperoni Cheesesteak",es:"Cheesesteak con Pepperoni"}, p:"$11"},{n:{en:"Green Pepper Cheesesteak",es:"Cheesesteak con Pimiento Verde"}, p:"$11"},{n:{en:"Pizza Steak",es:"Pizza Steak"}, p:"$11"},
+    {n:{en:"Mushroom Pizza Steak",es:"Pizza Steak con Champiñones"}, p:"$11"},{n:{en:"Green Pepper Pizza Steak",es:"Pizza Steak con Pimiento Verde"}, p:"$11"},{n:{en:"Chicken Cheesesteak",es:"Cheesesteak de Pollo"}, p:"$11"},
+    {n:{en:"Meatball Parmigiana",es:"Albóndiga a la Parmesana"}, p:"$11"},{n:{en:"Sausage Parmigiana",es:"Salchicha a la Parmesana"}, p:"$11"},{n:{en:"Veal Parmigiana",es:"Ternera a la Parmesana"}, p:"$11"},
+    {n:{en:"Chicken Parmigiana",es:"Pollo a la Parmesana"}, p:"$11"},{n:{en:"Vegetarian",es:"Vegetariano"}, p:"$11"},{n:{en:"Pepper and Egg",es:"Pimiento y Huevo"}, p:"$11"},
+    {n:{en:"Grilled Turkey and Cheese",es:"Pavo a la Parrilla y Queso"}, p:"$11"},{n:{en:"Hamburger Sub",es:"Sub de Hamburguesa"}, p:"$11"},{n:{en:"Cheeseburger Sub",es:"Sub de Hamburguesa con Queso"}, p:"$11"},
+    {n:{en:"Chicken Steak",es:"Bistec de Pollo"}, p:"$11"},{n:{en:"Buffalo Chicken Cheesesteak",es:"Cheesesteak de Pollo Buffalo"}, p:"$11"},{n:{en:"Flounder",es:"Lenguado"}, p:"$11"},
+  ]},
+  {h:{en:"Cold Subs & Wraps", es:"Subs y Wraps Fríos"}, items:[
+    {n:{en:"Italian",es:"Italiano"}, p:"$11"},{n:{en:"Turkey and Cheese",es:"Pavo y Queso"}, p:"$11"},{n:{en:"Salami and Cheese",es:"Salami y Queso"}, p:"$11"},
+    {n:{en:"Ham and Cheese",es:"Jamón y Queso"}, p:"$11"},{n:{en:"Tuna and Cheese",es:"Atún y Queso"}, p:"$11"},
+  ]},
+  {h:{en:"Burgers", es:"Hamburguesas"}, items:[
+    {n:{en:"Hamburger",es:"Hamburguesa"}, p:{en:"Ask in-store", es:"Preguntar en tienda"}},{n:{en:"Bacon Cheeseburger",es:"Hamburguesa con Queso y Tocino"}, p:"$7"},{n:{en:"Cheeseburger",es:"Hamburguesa con Queso"}, p:"$9"},
+    {n:{en:"Mushroom Cheeseburger",es:"Hamburguesa con Queso y Champiñones"}, p:"$8"},{n:{en:"Pizza Burger",es:"Hamburguesa Pizza"}, p:"$9"},
+  ]}
+];
+
+/* ===================== LANGUAGE STATE ===================== */
+let LANG = localStorage.getItem('familypizza_lang') || 'en';
+let activeMenuId = MENU[0].id;
+
+function t(field, lang){
+  // field can be a string (already resolved) or an {en,es} object
+  if (typeof field === 'string') return field;
+  if (!field) return '';
+  return field[lang] || field.en || '';
+}
+
+function renderItem(it, lang){
+  const name = t(it.n, lang);
+  const desc = it.d ? `<div class="desc">${t(it.d, lang)}</div>` : '';
+  const price = t(it.p, lang);
+  return `<div class="menu-item">
+    <div class="left"><div class="name">${name}</div>${desc}</div>
+    <div class="price">${price}</div>
+  </div>`;
+}
+
+function renderSpecials(lang){
+  const el = document.getElementById('specials-grid');
+  el.innerHTML = SPECIALS.map(s => `
+    <div class="special-card">
+      <h3>${t(s, lang)}</h3>
+      <div class="price">${s.price}<small>+tax</small></div>
+      <div class="fine">${t(s.fine, lang)}</div>
+    </div>`).join('');
+}
+
+function renderWeek(lang){
+  const el = document.getElementById('week-grid');
+  el.innerHTML = WEEK.map(w => `
+    <div class="week-card">
+      <div class="day">${t(w.day, lang)}</div>
+      <div class="dish">${t(w.dish, lang)}</div>
+      <div class="price">${w.price}</div>
+    </div>`).join('');
+}
+
+function renderTabsAndPanels(lang){
+  const tabsEl = document.getElementById('tabs');
+  const panelsEl = document.getElementById('panels');
+  tabsEl.innerHTML = '';
+  panelsEl.innerHTML = '';
+
+  MENU.forEach((cat) => {
+    const isActive = cat.id === activeMenuId;
+
+    const btn = document.createElement('button');
+    btn.className = 'tab-btn' + (isActive ? ' active' : '');
+    btn.textContent = t(cat.label, lang);
+    btn.dataset.target = cat.id;
+    btn.addEventListener('click', () => { activeMenuId = cat.id; switchTab(cat.id); });
+    tabsEl.appendChild(btn);
+
+    const panel = document.createElement('div');
+    panel.className = 'menu-panel' + (isActive ? ' active' : '');
+    panel.id = 'panel-' + cat.id;
+
+    let html = '';
+    if (cat.note) html += `<p class="menu-note">${t(cat.note, lang)}</p>`;
+
+    if (cat.id === 'subs') {
+      SUBS_GROUPS.forEach(group => {
+        html += `<div class="subhead">${t(group.h, lang)}</div><div class="menu-list">`;
+        group.items.forEach(it => { html += renderItem(it, lang); });
+        html += `</div>`;
+      });
+    } else {
+      html += `<div class="menu-list">`;
+      cat.items.forEach(it => { html += renderItem(it, lang); });
+      html += `</div>`;
+    }
+    if (cat.extra) html += t(cat.extra, lang);
+
+    panel.innerHTML = html;
+    panelsEl.appendChild(panel);
+  });
+}
+
+function switchTab(id){
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.target === id));
+  document.querySelectorAll('.menu-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + id));
+}
+
+function applyStaticText(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (I18N[key]) el.textContent = I18N[key][lang] || I18N[key].en;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (I18N[key]) el.innerHTML = I18N[key][lang] || I18N[key].en;
+  });
+}
+
+function setLanguage(lang){
+  LANG = lang;
+  localStorage.setItem('familypizza_lang', lang);
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  applyStaticText(lang);
+  renderSpecials(lang);
+  renderWeek(lang);
+  renderTabsAndPanels(lang);
+}
+
+document.querySelectorAll('.lang-btn').forEach(b => {
+  b.addEventListener('click', () => setLanguage(b.dataset.lang));
+});
+
+setLanguage(LANG);
+</script>
+
+</body>
+</html>
